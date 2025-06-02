@@ -2,6 +2,11 @@
 
 Twitter Clone is a real-time social media application built on the MERN (MongoDB, Express, React, Node.js) stack. It allows users to share posts, follow other users, like and comment on posts, and receive notifications.
 
+## Branches
+
+- **master**: Contains the deployed production-ready code that is live on the server.
+- **main**: Contains the local development version of the code for running on your local machine.
+
 ## Features
 
 - User authentication with JWT
