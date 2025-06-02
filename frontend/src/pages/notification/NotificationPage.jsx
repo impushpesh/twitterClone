@@ -8,13 +8,15 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa6";
 
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 const NotificationPage = () => {
 	const queryClient = useQueryClient();
 	const { data: notifications, isLoading } = useQuery({
 		queryKey: ["notifications"],
 		queryFn: async () => {
 			try {
-				const res = await fetch("/api/notifications");
+				const res = await fetch(`${BASE_URL}/api/notifications`);
 				const data = await res.json();
 				if (!res.ok) throw new Error(data.error || "Something went wrong");
 				return data;
