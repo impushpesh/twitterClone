@@ -11,6 +11,7 @@ const useUpdateUserProfile = () => {
 			try {
 				const res = await fetch(`${BASE_URL}/api/users/update`, {
 					method: "POST",
+					credentials: "include",
 					headers: {
 						"Content-Type": "application/json",
 					},

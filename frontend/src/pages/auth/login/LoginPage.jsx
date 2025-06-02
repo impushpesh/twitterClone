@@ -27,6 +27,7 @@ const LoginPage = () => {
 			try {
 				const res = await fetch(`${BASE_URL}/api/auth/login`, {
 					method: "POST",
+					credentials: "include",
 					headers: {
 						"Content-Type": "application/json",
 					},
